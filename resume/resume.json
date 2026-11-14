@@ -1,0 +1,252 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Cláudio Paulo",
+    "label": "Backend Software Engineer",
+    "email": "eng.claudio.paulo@gmail.com",
+    "url": "https://claudiopaulo.com",
+    "summary": "Backend software engineer with 8+ years building APIs and microservices for telecom, banking and SaaS, from SMS platforms processing 1M+ daily transactions to banking applications used by 4M+ customers. Java/Spring Boot, Python, Node.js and Rust, deployed with Docker, Kubernetes and Azure. Founder of K2ACPTech, a freelance software consultancy.",
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "ClaudioPaulo",
+        "url": "https://github.com/ClaudioPaulo"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "claudio-paulo",
+        "url": "https://linkedin.com/in/claudio-paulo"
+      }
+    ],
+    "location": {
+      "countryCode": "PT"
+    }
+  },
+  "work": [
+    {
+      "name": "K2ACPTech",
+      "position": "Founder & Software Engineer (freelance)",
+      "location": "Portugal (remote)",
+      "startDate": "2024-05",
+      "highlights": [
+        "Hospital pathology system (Angola): replaced manual workarounds that could leave the laboratory stalled for days or weeks when connectivity failed. Built an offline-first desktop application (Rust, Tauri, local SQLite) with a Fastify API and PostgreSQL, handling 1,000+ lab reports per day with real-time data and statistics. Delivered and integrated in six months (Feb–Aug 2025).",
+        "Pharmacy website (Canada): customers can place orders, make bookings and appointments, submit prescriptions and see when a prescription is ready for pickup. Designed and launched the site with Next.js, React, Tailwind CSS and Supabase.",
+        "HR administration panel: manages 125+ employees and automates time clocking, vacations, absences, business travel, salaries, recruitment and work schedules. Built with React, TypeScript, Node.js and PostgreSQL.",
+        "Across freelance projects: implemented CI/CD pipelines and containerized deployments (Docker and Kubernetes) to automate releases."
+      ]
+    },
+    {
+      "name": "TIMWETECH (formerly TIMWE Group)",
+      "position": "Senior Technology Specialist",
+      "location": "Lisbon",
+      "startDate": "2022-03",
+      "endDate": "2024-04",
+      "summary": "Consultant via Adentis until June 2022, then employed directly by the company.",
+      "highlights": [
+        "Architected a microservices infrastructure using Java, Python, RabbitMQ and Docker.",
+        "Designed the architecture (approved by the team architect) and built an automated, end-to-end encrypted file processing system (Java/Python) that decrypts, parses and ingests client files of 1 GB+ (some in the terabytes), generated every 5 to 20 minutes, streaming real-time events via RabbitMQ.",
+        "Replaced long manual investigations (once a full day) with one-click recovery: built a custom Django operational dashboard and active thread monitoring service to track file delivery and to retry, re-process, resend or update encryption keys.",
+        "Gave the team and clients real-time visibility into the status of events and file processing through Grafana monitoring and alerting."
+      ]
+    },
+    {
+      "name": "TIMWETECH (formerly TIMWE Group)",
+      "position": "Technology Specialist",
+      "location": "Lisbon",
+      "startDate": "2020-03",
+      "endDate": "2022-02",
+      "summary": "Consultant via Adentis, allocated to TIMWE.",
+      "highlights": [
+        "Developed high-performance, scalable systems processing 1M+ daily transactions for telecom clients.",
+        "Built SMS-based entertainment platforms integrating with mobile operators and VAS providers across 5 countries."
+      ]
+    },
+    {
+      "name": "TIMWETECH (formerly TIMWE Group)",
+      "position": "Technology Assistant",
+      "location": "Lisbon",
+      "startDate": "2018-07",
+      "endDate": "2020-02",
+      "summary": "Consultant via Adentis, allocated to TIMWE.",
+      "highlights": [
+        "Developed SMS-based entertainment systems and the technical integrations between TIMWE, mobile operators and content providers.",
+        "Contributed to the final development phase, testing, configuration and client implementation support of a subscription-based Android AppStore with 100K+ active users."
+      ]
+    },
+    {
+      "name": "Everis (client: CGD)",
+      "position": "Junior Java Developer",
+      "location": "Lisbon",
+      "startDate": "2018-03",
+      "endDate": "2018-06",
+      "highlights": [
+        "Developed and maintained enterprise banking applications serving 4M+ customers.",
+        "Wrote SQL scripts and stored procedures for new features.",
+        "Worked with QA to meet quality and compliance requirements in a regulated environment."
+      ]
+    },
+    {
+      "name": "Sparklegend",
+      "position": "Web Developer (Internship)",
+      "location": "Lisbon",
+      "startDate": "2017-11",
+      "endDate": "2018-03",
+      "highlights": [
+        "Developed 3 internal web applications with modern JavaScript frameworks.",
+        "Built responsive interfaces with Bootstrap and custom CSS3.",
+        "Maintained WordPress and PHP production systems."
+      ],
+      "summary": "Four-month part-time placement arranged by the university."
+    },
+    {
+      "name": "Altice Portugal (formerly Portugal Telecom)",
+      "position": "Junior Programming Intern",
+      "location": "Lisbon",
+      "startDate": "2014-12",
+      "endDate": "2015-06",
+      "highlights": [
+        "Supported internal systems in C and .NET (C#), including debugging and maintenance of legacy code.",
+        "Assisted with performance optimization."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universidade Autónoma de Lisboa",
+      "area": "Telecommunications and Computer Engineering",
+      "studyType": "Master's",
+      "startDate": "2017",
+      "endDate": "2019"
+    },
+    {
+      "institution": "Universidade Autónoma de Lisboa",
+      "area": "Computer Engineering",
+      "studyType": "Bachelor's",
+      "startDate": "2013",
+      "endDate": "2016"
+    },
+    {
+      "institution": "MoOngy",
+      "area": "Software development",
+      "studyType": "Technical training",
+      "startDate": "2018",
+      "endDate": "2020"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Microsoft Azure Fundamentals",
+      "date": "2020"
+    },
+    {
+      "name": "Python Advancing",
+      "issuer": "PythonX",
+      "date": "2022"
+    },
+    {
+      "name": "Python Fundamentals",
+      "issuer": "PythonX",
+      "date": "2020"
+    },
+    {
+      "name": "Python Fundamentals",
+      "issuer": "Mimo",
+      "date": "2019"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Backend and architecture",
+      "keywords": [
+        "Java",
+        "Spring Boot",
+        "Python",
+        "Django",
+        "Node.js",
+        "Fastify",
+        "Rust",
+        "C#/.NET Core",
+        "PHP/Laravel",
+        "REST APIs",
+        "Microservices"
+      ]
+    },
+    {
+      "name": "Cloud and DevOps",
+      "keywords": [
+        "Docker",
+        "Kubernetes",
+        "Microsoft Azure",
+        "CI/CD",
+        "Jenkins",
+        "GitHub Actions",
+        "Git",
+        "Grafana"
+      ]
+    },
+    {
+      "name": "Databases and messaging",
+      "keywords": [
+        "PostgreSQL",
+        "SQLite",
+        "Supabase",
+        "MongoDB",
+        "Oracle",
+        "SQL Server",
+        "Redis",
+        "RabbitMQ"
+      ]
+    },
+    {
+      "name": "Frontend and desktop",
+      "keywords": [
+        "React.js",
+        "Next.js",
+        "TypeScript",
+        "Tauri",
+        "JavaScript (ES6+)",
+        "HTML5/CSS3",
+        "Tailwind CSS",
+        "Bootstrap"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Portuguese",
+      "fluency": "Native"
+    },
+    {
+      "language": "English",
+      "fluency": "Professional (B2)"
+    }
+  ],
+  "projects": [
+    {
+      "name": "MediaTrack",
+      "description": "Full-stack app to track movies, series, anime, manga and books, with one search across TMDB, AniList and Open Library.",
+      "url": "https://github.com/ClaudioPaulo/mediatrack",
+      "keywords": [
+        "Next.js",
+        "TypeScript",
+        "Supabase",
+        "Capacitor"
+      ]
+    },
+    {
+      "name": "spring-boot-auth-template",
+      "description": "Spring Boot starter for JWT authentication and role-based user management.",
+      "url": "https://github.com/ClaudioPaulo/spring-boot-auth-template",
+      "keywords": [
+        "Java 17",
+        "Spring Boot 3",
+        "Spring Security",
+        "JPA",
+        "JWT",
+        "PostgreSQL",
+        "Flyway",
+        "Docker"
+      ]
+    }
+  ]
+}

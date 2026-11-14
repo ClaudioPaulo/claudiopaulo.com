@@ -1,0 +1,47 @@
+/* Print stylesheet: turns the page into a clean CV when printing (Ctrl/Cmd+P) */
+@page{margin:12mm}
+:root{padding:0}
+html,body{background:#fff!important;color:#222;font-size:10.5pt;line-height:1.45}
+header.top,.hero,#contact,footer,[role=tablist],.proj > li:nth-child(n+3){display:none!important}
+.printhead{display:block;border-bottom:2px solid #0b6e99;padding-bottom:8px;margin-bottom:4px}
+.printhead h1{font-size:22pt;color:#111}
+.printhead .pt{margin:2px 0 6px;color:#0b6e99;font-weight:600;font-size:12pt}
+.printhead .pc{margin:0;display:flex;flex-wrap:wrap;gap:2px 16px;font-size:9.5pt;color:#444}
+section{padding:10px 0}
+.wrap{max-width:none;padding:0}
+h1,h2,h3,.item b,.skills dt,.xp strong,.proj .fig b{color:#111}
+.h{font-size:12pt;margin-bottom:8px;padding-bottom:3px;border-bottom:1px solid #bbb}
+.h::after{display:none}
+.about{grid-template-columns:1fr;gap:10px}
+.about p{max-width:none;margin-bottom:.5em}
+.skills{grid-template-columns:1fr 1fr;gap:6px 16px}
+.skills dd,.when,.item .d,.certs .d,.tags,.item span,.proj p{color:#444}
+.xp{display:block}
+[role=tabpanel],[role=tabpanel][hidden]{display:block!important;animation:none;margin-bottom:12px;break-inside:avoid}
+.xp h3{font-size:11.5pt}
+.xp h3 .at,.xp li::before,a{color:#0b6e99}
+.xp li,.proj p,.certs{font-size:10pt}
+.proj > li{padding:6px 0;border:0!important}
+.proj > li:nth-child(1) .fig a:first-child::after{content:" (github.com/ClaudioPaulo/mediatrack)"}
+.proj > li:nth-child(2) .fig a:first-child::after{content:" (github.com/ClaudioPaulo/spring-boot-auth-template)"}
+.two{gap:20px}
+.photo,.kicker{display:none!important}
+.h::before{display:none}
+.about{margin-bottom:10px}
+.side{display:none!important}
+.stats,.how{display:none!important}
+.xp .tags{margin:-6px 0 6px;font-size:8.5pt}
+.xp li{margin:0}
+.xp ul{gap:3px}
+.proj > li{display:block}
+.proj .fig{text-align:left;margin-top:4px;font-size:9pt}
+.proj .tags{margin-top:6px}
+.skip,.status,.lim,.lim + .why{display:none!important}
+.proj .fig a+a{display:none!important}
+.xp .role{margin:8px 0 3px;font-size:10.5pt;color:#111}
+.xp .role span{font-size:9pt;color:#555}
+.lang{display:none!important}
+/* Keep the printed CV page at three pages (Portuguese text is longer) */
+html,body{font-size:10pt!important;line-height:1.4!important}
+.xp li,.proj p,.certs{font-size:9.5pt!important}
+.about p{font-size:10pt!important}

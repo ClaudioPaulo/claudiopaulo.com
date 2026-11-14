@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cláudio Paulo - Backend Software Engineer | Java, Python, Cloud &amp; DevOps</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    @page { size: A4; margin: 12mm; }
+    body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: #252525;
+        background: #f3f4f6;
+        line-height: 1.45;
+        font-size: 10.5pt;
+        padding: 18px;
+    }
+    .cv-container {
+        max-width: 210mm;
+        margin: 0 auto;
+        background: #fff;
+        padding: 30px 36px;
+        box-shadow: 0 2px 16px rgba(0,0,0,.08);
+    }
+    .header {
+        border-bottom: 2px solid #168ac0;
+        padding-bottom: 15px;
+        margin-bottom: 18px;
+    }
+    .name {
+        font-size: 29px;
+        font-weight: 750;
+        color: #151515;
+        letter-spacing: -.4px;
+    }
+    .title {
+        margin-top: 3px;
+        margin-bottom: 10px;
+        font-size: 15.5px;
+        font-weight: 650;
+        color: #168ac0;
+    }
+    .contact-info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px 14px;
+        color: #555;
+        font-size: 9.5pt;
+    }
+    .contact-item a { color: inherit; text-decoration: none; }
+    .section { margin-bottom: 9px; }
+    .section-title {
+        font-size: 13px;
+        font-weight: 750;
+        color: #151515;
+        text-transform: uppercase;
+        letter-spacing: .9px;
+        border-bottom: 1px solid #d8e8ef;
+        padding-bottom: 4px;
+        margin-bottom: 9px;
+    }
+    .summary {
+        font-size: 10.5pt;
+        line-height: 1.58;
+        color: #3d3d3d;
+    }
+    .summary strong { color: #202020; }
+    .skills-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 9px 22px;
+    }
+    .skill-category { margin-bottom: 3px; }
+    .skill-category-title {
+        font-size: 10.5pt;
+        font-weight: 700;
+        color: #222;
+        margin-bottom: 2px;
+    }
+    .skill-list { color: #555; font-size: 9.7pt; line-height: 1.45; }
+    .job { margin-bottom: 8px; }
+    .job:last-child { margin-bottom: 0; }
+    .job-header {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        align-items: flex-start;
+        margin-bottom: 4px;
+    }
+    .job-title {
+        font-size: 11.2pt;
+        font-weight: 750;
+        color: #171717;
+    }
+    .job-company {
+        font-size: 10pt;
+        color: #168ac0;
+        font-weight: 650;
+    }
+    .job-location, .job-date {
+        font-size: 9pt;
+        color: #707070;
+    }
+    .job-date { white-space: nowrap; text-align: right; }
+    .job-description ul { margin-left: 17px; }
+    .job-description li {
+        margin-bottom: 2.5px;
+        padding-left: 2px;
+        color: #414141;
+        font-size: 9.7pt;
+        line-height: 1.42;
+    }
+    .projects-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px 20px;
+    }
+    .project { break-inside: avoid; }
+    .project-title {
+        font-size: 10.3pt;
+        font-weight: 750;
+        color: #222;
+        margin-bottom: 2px;
+    }
+    .project a { color: #168ac0; text-decoration: none; }
+    .project p {
+        font-size: 9.4pt;
+        color: #555;
+        line-height: 1.4;
+    }
+    .education-item { margin-bottom: 8px; }
+    .education-title { font-size: 10.2pt; font-weight: 700; }
+    .education-school { font-size: 9.7pt; color: #555; }
+    .education-date { font-size: 9pt; color: #777; }
+    .two-col {
+        display: grid;
+        grid-template-columns: 1.25fr .75fr;
+        gap: 24px;
+    }
+    .cert-item, .language-item {
+        font-size: 9.5pt;
+        color: #4e4e4e;
+        margin-bottom: 3px;
+    }
+    .language-item {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px dotted #ddd;
+        padding: 2px 0;
+    }
+    .language-name { font-weight: 650; color: #222; }
+    .footer-note {
+        margin-top: 12px;
+        padding-top: 8px;
+        border-top: 1px solid #eee;
+        color: #888;
+        font-size: 8.5pt;
+        text-align: center;
+    }
+    .no-print { text-align: center; margin-top: 16px; }
+    .no-print button {
+        padding: 9px 18px;
+        background: #168ac0;
+        color: #fff;
+        border: 0;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+    @media print {
+        body { background: #fff; padding: 0; font-size: 10pt; }
+        .cv-container { box-shadow: none; max-width: 100%; padding: 0; }
+        .no-print { display: none; }
+        .section { break-inside: auto; }
+        .job, .project, .education-item { break-inside: avoid; }
+    }
+    @media (max-width: 650px) {
+        body { padding: 8px; }
+        .cv-container { padding: 20px; }
+        .skills-grid, .projects-grid, .two-col { grid-template-columns: 1fr; }
+        .job-header { flex-direction: column; gap: 2px; }
+        .job-date { text-align: left; }
+    }
+    .job-stack { font-size: 9pt; color: #555; margin: 0 0 4px; }
+    .job-stack b { color: #168ac0; font-weight: 650; }
+
+    .job { break-inside: auto !important; page-break-inside: auto !important; }
+    .job-header { break-after: avoid; page-break-after: avoid; }
+    .job-description li { break-inside: avoid; }    .job-stack { font-size: 9pt; color: #555; margin: 0 0 4px; }
+    .job-stack b { color: #168ac0; font-weight: 650; }
+</style>
+<style>
+    body, .cv-container, button { font-family: 'Liberation Sans', Arial, Helvetica, sans-serif !important; }
+    .role-line { display: flex; justify-content: space-between; margin: 4px 0 1px; font-size: 9.8pt; break-after: avoid; page-break-after: avoid; }
+    .role-name { font-weight: 650; color: #222; }
+    .role-date { font-size: 9pt; color: #666; }
+    .lang-title { margin-top: 8px; }
+    .section { margin-bottom: 8px !important; }
+    .job { margin-bottom: 6px !important; break-inside: auto !important; page-break-inside: auto !important; }
+    .job-header { break-after: avoid; page-break-after: avoid; }
+    .job-description li { line-height: 1.36 !important; break-inside: avoid; }
+    .summary { line-height: 1.46 !important; }
+    .cv-container { padding-bottom: 0 !important; }
+    .two-col { margin-bottom: 0 !important; }
+    .two-col .section { margin-bottom: 0 !important; }
+    .education-item { margin-bottom: 4px !important; }
+    .education-school, .education-date { line-height: 1.3 !important; }
+</style>
+</head>
+<body>
+<div class="cv-container">
+
+<header class="header">
+    <h1 class="name">CLÁUDIO PAULO</h1>
+    <div class="title">Backend Software Engineer | Java, Python, Cloud &amp; DevOps</div>
+    <div class="contact-info">
+        <span class="contact-item">eng.claudio.paulo@gmail.com</span>
+        <span class="contact-item">Portugal</span>
+        <span class="contact-item"><a href="https://claudiopaulo.com">claudiopaulo.com</a></span>
+        <span class="contact-item"><a href="https://linkedin.com/in/claudio-paulo">linkedin.com/in/claudio-paulo</a></span>
+        <span class="contact-item"><a href="https://github.com/ClaudioPaulo">github.com/ClaudioPaulo</a></span>
+    </div>
+</header>
+
+<section class="section">
+    <h2 class="section-title">Professional Summary</h2>
+    <p class="summary">
+        <strong>Backend software engineer with 8+ years</strong> building APIs and microservices for telecom, banking and SaaS, from SMS platforms processing <strong>1M+ daily transactions</strong> to banking applications used by <strong>4M+ customers</strong>. Java/Spring Boot, Python, Node.js and Rust, deployed with Docker, Kubernetes and Azure. Founder of <strong>K2ACPTech</strong>, a freelance software consultancy.
+    </p>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Core Technical Skills</h2>
+    <div class="skills-grid">
+        <div class="skill-category">
+            <div class="skill-category-title">Backend &amp; Architecture</div>
+            <div class="skill-list">Java, Spring Boot, Python, Django, Node.js, Fastify, Rust, C#/.NET Core, PHP/Laravel, RESTful APIs, Microservices</div>
+        </div>
+        <div class="skill-category">
+            <div class="skill-category-title">Cloud &amp; DevOps</div>
+            <div class="skill-list">Docker, Kubernetes, Microsoft Azure, CI/CD, Jenkins, GitHub Actions, Git, Grafana</div>
+        </div>
+        <div class="skill-category">
+            <div class="skill-category-title">Databases &amp; Messaging</div>
+            <div class="skill-list">PostgreSQL, SQLite, Supabase, MongoDB, Oracle, SQL Server, Redis, RabbitMQ</div>
+        </div>
+        <div class="skill-category">
+            <div class="skill-category-title">Frontend &amp; Desktop</div>
+            <div class="skill-list">React.js, Next.js, TypeScript, Tauri, JavaScript (ES6+), HTML5/CSS3, Tailwind CSS, Bootstrap</div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Professional Experience</h2>
+
+    <div class="job">
+        <div class="job-header">
+            <div>
+                <div class="job-title">Founder &amp; Software Engineer</div>
+                <div class="job-company">K2ACPTech (freelance software consultancy for international clients)</div>
+                <div class="job-location">Portugal (Remote)</div>
+            </div>
+            <div class="job-date">May 2024 – Present</div>
+        </div>
+        <div class="job-description">
+            <div class="job-stack"><b>Stack:</b> Rust, Tauri, Fastify, TypeScript, React, Next.js, Node.js, PostgreSQL, SQLite, Supabase, Docker, Kubernetes, CI/CD</div>
+            <ul>
+                <li><strong>Hospital pathology system (Angola):</strong> replaced manual workarounds that could leave the laboratory stalled for days or weeks when connectivity failed. Built an offline-first desktop application (Rust, Tauri, local SQLite) with a Fastify API and PostgreSQL, handling 1,000+ lab reports per day with real-time data and statistics. Delivered and integrated in six months (Feb–Aug 2025).</li>
+                <li><strong>Pharmacy website (Canada):</strong> customers can place orders, make bookings and appointments, submit prescriptions and see when a prescription is ready for pickup. Designed and launched the site with Next.js, React, Tailwind CSS and Supabase.</li>
+                <li><strong>HR administration panel:</strong> manages 125+ employees and automates time clocking, vacations, absences, business travel, salaries, recruitment and work schedules. Built with React, TypeScript, Node.js and PostgreSQL.</li>
+                <li>Across freelance projects: implemented <strong>CI/CD pipelines</strong> and containerized deployments (<strong>Docker and Kubernetes</strong>) to automate releases.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="job">
+        <div class="job-header">
+            <div>
+                <div class="job-title">TIMWETECH (formerly TIMWE Group)</div>
+                <div class="job-company">Technology Assistant → Technology Specialist → Senior Technology Specialist</div>
+                <div class="job-location">Lisbon, Portugal | Consultant via Adentis until June 2022</div>
+            </div>
+            <div class="job-date">July 2018 – April 2024</div>
+        </div>
+        <div class="job-description">
+            <div class="job-stack"><b>Stack:</b> Java, Python, Django, Node.js, RabbitMQ, Docker, Grafana</div>
+            <div class="role-line"><span class="role-name">Senior Technology Specialist</span><span class="role-date">March 2022 – April 2024</span></div>
+            <ul>
+                <li>Architected a microservices infrastructure using <strong>Java, Python, RabbitMQ and Docker</strong>.</li>
+                <li>Designed the architecture (approved by the team architect) and built an automated, end-to-end encrypted file processing system (<strong>Java/Python</strong>) that decrypts, parses and ingests client files of 1 GB+ (some in the terabytes), generated every 5 to 20 minutes, streaming real-time events via <strong>RabbitMQ</strong>.</li>
+                <li>Replaced long manual investigations (once a full day) with one-click recovery: built a custom <strong>Django</strong> operational dashboard and active thread monitoring service to track file delivery and to retry, re-process, resend or update encryption keys.</li>
+                <li>Gave the team and clients real-time visibility into the status of events and file processing through <strong>Grafana</strong> monitoring and alerting.</li>
+            </ul>
+            <div class="role-line"><span class="role-name">Technology Specialist</span><span class="role-date">March 2020 – February 2022</span></div>
+            <ul>
+                <li>Developed high-performance, scalable systems processing <strong>1M+ daily transactions</strong> for telecom clients.</li>
+                <li>Built SMS-based entertainment platforms integrating with mobile operators and VAS providers across <strong>5 countries</strong>.</li>
+            </ul>
+            <div class="role-line"><span class="role-name">Technology Assistant</span><span class="role-date">July 2018 – February 2020</span></div>
+            <ul>
+                <li>Developed SMS-based entertainment systems and the technical integrations between TIMWE, mobile operators and content providers.</li>
+                <li>Contributed to the final development phase, testing, configuration and client implementation support of a subscription-based Android AppStore with <strong>100K+ active users</strong>.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="job">
+        <div class="job-header">
+            <div>
+                <div class="job-title">Junior Java Developer</div>
+                <div class="job-company">Everis (client: CGD, Caixa Geral de Depósitos)</div>
+                <div class="job-location">Lisbon, Portugal</div>
+            </div>
+            <div class="job-date">March 2018 – June 2018</div>
+        </div>
+        <div class="job-description">
+            <div class="job-stack"><b>Stack:</b> Java 5, JEE, Hibernate, JPA, SOAP, JBoss, Oracle, SQL, XML, JSON, jQuery, Bootstrap, Jenkins</div>
+            <ul>
+                <li>Developed and maintained enterprise banking applications serving <strong>4M+ customers</strong>.</li>
+                <li>Created SQL scripts and stored procedures supporting new feature implementations.</li>
+                <li>Worked with QA teams on quality and compliance requirements in a regulated financial environment.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="job">
+        <div class="job-header">
+            <div>
+                <div class="job-title">Web Developer (Internship)</div>
+                <div class="job-company">Sparklegend</div>
+                <div class="job-location">Lisbon, Portugal</div>
+            </div>
+            <div class="job-date">November 2017 – March 2018</div>
+        </div>
+        <div class="job-description">
+            <div class="job-stack"><b>Stack:</b> PHP, JavaScript, HTML, CSS, Bootstrap, MySQL, WordPress</div>
+            <ul>
+                <li>Developed 3 internal web applications with modern JavaScript frameworks and responsive interfaces (Bootstrap, CSS3).</li>
+                <li>Maintained WordPress and PHP-based production systems.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="job">
+        <div class="job-header">
+            <div>
+                <div class="job-title">Junior Programming Intern</div>
+                <div class="job-company">Altice Portugal (formerly Portugal Telecom)</div>
+                <div class="job-location">Lisbon, Portugal</div>
+            </div>
+            <div class="job-date">December 2014 – June 2015</div>
+        </div>
+        <div class="job-description">
+            <div class="job-stack"><b>Stack:</b> C, .NET (C#)</div>
+            <ul>
+                <li>Supported development of internal systems using C and .NET (C#), including debugging and maintenance of legacy systems.</li>
+                <li>Assisted with performance optimization initiatives.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Selected Projects</h2>
+    <div class="projects-grid">
+        <div class="project">
+            <div class="project-title">MediaTrack</div>
+            <p>Full-stack app to track movies, series, anime, manga and books, with one search across TMDB, AniList and Open Library. Next.js, TypeScript, Supabase and Capacitor for iOS and Android. <a href="https://github.com/ClaudioPaulo/mediatrack">github.com/ClaudioPaulo/mediatrack</a></p>
+        </div>
+        <div class="project">
+            <div class="project-title">spring-boot-auth-template</div>
+            <p>Spring Boot starter for JWT authentication and role-based user management. Java 17, Spring Security, JPA, PostgreSQL with Flyway, Docker Compose, automated tests and CI. <a href="https://github.com/ClaudioPaulo/spring-boot-auth-template">github.com/ClaudioPaulo/spring-boot-auth-template</a></p>
+        </div>
+    </div>
+</section>
+
+<div class="two-col">
+    <section class="section">
+        <h2 class="section-title">Education & Training</h2>
+        <div class="education-item">
+            <div class="education-title">Master's Degree in Telecommunications and Computer Engineering</div>
+            <div class="education-school">Universidade Autónoma de Lisboa</div>
+            <div class="education-date">2017 – 2019 | Lisbon, Portugal</div>
+        </div>
+        <div class="education-item">
+            <div class="education-title">Bachelor's Degree in Computer Engineering</div>
+            <div class="education-school">Universidade Autónoma de Lisboa</div>
+            <div class="education-date">2013 – 2016 | Lisbon, Portugal</div>
+        </div>
+        <div class="education-item">
+            <div class="education-title">Technical Training in Software Development</div>
+            <div class="education-school">MoOngy</div>
+            <div class="education-date">2018 – 2020 | Python, Java, .NET, Azure, React, Node.js, Docker, Kubernetes</div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Certifications</h2>
+        <div class="cert-item">• Microsoft Azure Fundamentals – MoOngy (2020)</div>
+        <div class="cert-item">• Python Advancing – PythonX (2022)</div>
+        <div class="cert-item">• Python Fundamentals – PythonX (2020)</div>
+        <div class="cert-item">• Python Fundamentals – Mimo (2019)</div>
+        <h2 class="section-title lang-title">Languages</h2>
+        <div class="language-item"><span class="language-name">Portuguese</span><span>Native</span></div>
+        <div class="language-item"><span class="language-name">English</span><span>Professional Working Proficiency (B2)</span></div>
+    </section>
+</div>
+
+</div>
+<div class="no-print">
+    <button onclick="window.print()">Print / Save as PDF</button>
+</div>
+</body>
+</html>
